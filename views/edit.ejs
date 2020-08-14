@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Singer</title>
+    <title>edit Singer</title>
 </head>
 <body>
     <%- include('./_header.ejs') %>
-    <form action="/" method="POST">
+    <form action="/<%= singer.id %>?_method=PUT" method="POST">
     <label for="name">Name</label>
     <input type="text" name="name" id="name" value="<%= singer.name %> ">
     <label for="age">Age</label>
-    <input type="number" name="age" value="<%= singer.age %> " id="age">
+    <input type="number" name="age" value="<%= singer.age %>" id="age">
     <label for="description">Description</label>
     <textarea name="description" id="" cols="30" rows="10"><%= singer.description %> </textarea>
-    <button type="submit">Add</button>
+    <button type="submit">Edit</button>
     </form>
 </body>
 </html>
