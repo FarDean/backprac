@@ -7,8 +7,17 @@
 </head>
 <body>
     <%- include('./_header.ejs') %> 
+    <form action="/" method="GET">
+        <label for="name">Name</label>
+        <input type="text" name="name" >
+        <button type="submit">Search</button>
+    </form>
     <% singers.forEach(singer=>{ %>
         <div><h2><%= singer.name %> </h2></div>
+        <div><p><%= singer.age %> </p></div>
+        <div><p><%= singer.description %> </p></div>
+        <a href="/<%= singer.id %> ">Read More</a>
+        <hr><br><hr>
     <% }) %> 
 </body>
 </html>
