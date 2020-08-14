@@ -17,7 +17,11 @@
         <div><p><%= singer.age %> </p></div>
         <div><p><%= singer.description %> </p></div>
         <a href="/<%= singer.id %> ">Read More</a>
-        <hr><br><hr>
+        <hr>
+        <form action="/<%= singer.id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+        <br><hr>
     <% }) %> 
 </body>
 </html>
